@@ -1,6 +1,7 @@
 const cards = document.querySelectorAll('.memory-card');
 
 let hasFlippedCard = false;
+let lockBoard = false;
 let firstCard, secondCard;
 
 
@@ -27,10 +28,23 @@ if (!hasFlippedCard) {
        secondCard.removeEventListener('click', flipCard);
     } else {
         //nie trafiony
+        setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
+        }, 1500);
     }
- 
+
+   
+   // (function shuffle() {
+       // cards.forEach(card => {
+            //let randomPos = Math.floor(Math.random() * 12);
+            //card.style.order = randomPos;
+      //  });
+   
+   // })();
+   
+    
+
 }
 
 }
